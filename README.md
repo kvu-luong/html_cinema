@@ -1,4 +1,4 @@
-### 2. Start Project
+### 1. Start Project
 1. npm install
 2. npm start
 
