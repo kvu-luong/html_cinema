@@ -3,11 +3,12 @@ const path = require('path');
 let Page = express.Router()
 
 Page.get('/home', function (req, res) {
-  res.sendFile(path.join(__dirname+'/../../../ui/src/index.html'));
+  res.sendFile(path.join(__dirname+'/../../../dist/index.html'))
 })
 
+
 Page.get('/about', function (req, res) {
-  res.send('About page')
+  res.sendFile(path.join(__dirname+'/../../../dist/about.html'))
 })
 
 module.exports = Page;

@@ -5,13 +5,17 @@ const server = require('http').createServer(app);
 
 // Link to static file
 const path = require('path');
-app.use('/asset', express.static(path.join(__dirname, '../ui/asset')));
+app.use('/page/asset', express.static(path.join(__dirname, '../dist/asset')));
+app.use('/asset', express.static(path.join(__dirname, '../dist/asset')));
+
+
 
 // Load env file
 require('dotenv').config();
 
 // Route to each file
 const Page = require('./components/Page/Page.component');
+
 app.use('/page', Page);
 app.get('/', (req, res) => {
   res.send('Server is running.');

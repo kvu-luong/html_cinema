@@ -1,6 +1,8 @@
 ### 1. Start Project
 1. npm install
-2. npm start
+2. test with node: npm run server
+3. test with webpack: npm start
+4. build: npm run build
 
 ### 2. SASS
 - Reference : [sass home page](https://sass-lang.com/install)
@@ -38,5 +40,6 @@ process.env.PORT
 e.g: PORT='2222'
 ```
 
-### 
-compress file, build file to public folder to UI
+### Webpack
+- Note version of each library in package.json which is important.
+
