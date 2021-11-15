@@ -1,0 +1,13 @@
+.nav{
+	ul{
+		display: flex;
+		gap: 50px;
+		text-transform: uppercase;
+		border-bottom: 1px solid white;
+		padding-left: 0;
+		padding-bottom: 10px;
+	}
+	a{
+		color: white;
+	}
+}

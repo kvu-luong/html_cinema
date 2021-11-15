@@ -1,4 +1,8 @@
-@import "~bootstrap/scss/bootstrap";
-$primary: teal;
-$danger: purple;
-
+@import "nomalize";
+@import "mixin";
+@import "component/variables";
+@import "component/container";
+@import "component/header";
+@import "component/nav";
+@import "component/footer";
+@import "home";

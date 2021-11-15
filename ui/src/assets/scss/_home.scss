@@ -1,0 +1,125 @@
+.intro{
+	position: relative;
+	z-index: -1;
+	margin-top: -100px;
+
+	&__img{
+		background: url('../../assets/img/hero-whats-on.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		@include responsiveImage(30%);
+
+		&:before{
+			content:'';
+			position: absolute;
+			bottom: 0;
+			height: 70%;
+			width: 100%;
+			z-index: 1;
+			background-image: -webkit-gradient( linear,right bottom,right top,color-stop(0,rgba(0,0,0,0)),color-stop(1,rgb(0,0,0)) );
+			@include background-image('top,rgb(0,0,0) 0%,rgba(0,0,0,0) 100%');
+	    	background-image: linear-gradient(to top,rgb(0,0,0) 0%,rgba(0,0,0,0) 100%);
+		}
+	}
+
+	&__text{
+		position: absolute;
+	    width: 100%;
+	    top: 50%;
+	    left: 0;
+	    transform: translate(0, -50%);
+
+	    color: white;
+	    z-index: 2;
+	}
+}
+.movie{
+	margin-top: -70px;
+	&__wrap{
+		background-color: white;
+		border-top-left-radius: 25px;
+		border-top-right-radius: 25px;
+	}
+
+	.search {
+		width: 100%;
+		text-align: center;
+		input {
+			width: 80%;
+			border-radius: 50px;
+			outline: none;
+			border: 1px solid grey;
+			padding: 10px;
+			margin: 30px auto;
+		}
+	}
+
+	&__tab{
+		ul{
+			display: flex;
+			justify-content: space-between;
+			width: 80%;
+			margin: 0 auto;
+		}
+	}
+
+	&__detail{
+		display: grid;
+		grid-template-columns: 25% 75%;
+		margin: 30px 0;
+	}
+
+	&__img{
+		@include responsiveImage(129.27%);
+		width: 100%;
+		
+		img{
+			border-radius: 5px;
+		}
+	}
+	&__info{
+		display: grid;
+		grid-template-rows: 10% 10% 1fr 10%;
+		align-items: center;
+		padding-left: 15px;
+
+		h4{
+			color: $mainColor;
+			@include toRem('font-size', 14);
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+
+		h3{
+			@include toRem('font-size', 24);
+			letter-spacing: 1px;
+			font-weight: 300;
+		}
+
+		p{
+			align-self: flex-start;
+		}
+	}
+	&__time{
+		display: flex;
+		justify-content: space-between;
+	}
+}
+.support{
+	text-align: center;
+	h5{
+		@include toRem('font-size', 45);
+		color: $mainColor;
+	}
+}
+.button{
+	@include toRem('font-size', 14);
+    display: inline-block;
+    margin-left: 5px;
+    padding: 7px 10px;
+    letter-spacing: 2px;
+    color: $greyColor;
+    border-radius: 5px;
+    background-color: $lightGrey;
+}

@@ -1,0 +1,36 @@
+footer{
+	background-color: #101010;
+	color: white;
+
+	h6{
+		color: $mainColor;
+		text-transform: uppercase;
+	}
+	ul{
+		a{
+			color: white;
+		}
+	}
+
+	.footer{
+		& > div{
+			display: flex;
+    		justify-content: space-between;
+    		padding-bottom: 10px;
+    		&:first-child{
+    			border-bottom: 1px solid white;
+    			margin-bottom: 20px;
+    		}
+		}
+
+		&__item{
+			ul{
+				padding-left: 0;
+			}
+			li{
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+		}
+	}
+}
